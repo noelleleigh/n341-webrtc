@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WebRTC TEST</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        
+        
+    </head>
+    <body>
+        <div id="videoContainer">
+            <video id="localVideo"></video>
+            <div id="remoteVideos"></div>
+        </div>
+        <div id="info"></div>
+        <div id="chat">
+            <output>
+
+            </output>
+            <form action="submit" id="input">
+                <input type="text" id="text" placeholder="Type something...">
+                <input type="submit" value="Send">
+            </form>
+            
+        </div>
+    </body>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="simplewebrtc.bundle.js"></script>
+    <!-- <script src="simplewebrtc.bundle.js"></script> -->
+    <script src="script.js"></script>
+</html>

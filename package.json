@@ -1,0 +1,8 @@
+{
+	"name": "webrtc-demo",
+	"description": "A simple WebTRC demo using the SimpleWebRTC library.",
+	"author": "Noah Leigh <ndleigh@iupui.edu>",
+	"dependencies": {
+		"node-static": "*"
+	}
+}

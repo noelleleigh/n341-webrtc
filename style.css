@@ -1,0 +1,79 @@
+* {
+	padding: 0;
+	margin: 0;
+	}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+#videoContainer {
+    position: relative;
+    margin: 0;
+    height: 100%;
+}
+#remoteVideos {
+    height: 100%
+}
+#remoteVideos video {
+    height: 99%;
+}
+#localVideo {
+    height: 150px;
+    position: absolute;
+    right: 0px;
+    z-index: 999;
+}
+#info {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    color: white;
+    text-shadow: 0px 0px 1px #000;
+    font-family: monospace;
+}
+#chat {
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 255px;
+    min-height: 70px;
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 5px;
+    padding: 10px 10px 50px 10px;
+    margin: 10px
+}
+#input{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 255px;
+    text-align: right;
+    margin: 0 10px 10px 0;
+}
+#input * {
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 2px;
+}
+#input #text {
+    width: 180px;
+}
+#chat>output>p{
+    clear: both;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 24px;
+    width: 100%;
+}
+.local {
+    text-align: right;
+}
+.remote {
+    text-align: left;
+    color: darkgrey;
+}
