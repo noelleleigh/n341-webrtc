@@ -4,6 +4,5 @@
 	"author": "Noah Leigh <ndleigh@iupui.edu>",
 	"dependencies": {
 		"node-static": "*"
-		// "simplewebrtc": "https://github.com/andyet/SimpleWebRTC/tarball/master"
 	}
 }
