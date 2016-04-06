@@ -10,7 +10,7 @@
 var room = new String();
 // Sound from http://www.freesound.org/people/FoolBoyMedia/sounds/234524/
 var ding = document.createElement("audio");
-ding.setAttribute("src", "234524__foolboymedia__notification-up-1.wav");
+ding.setAttribute("src", "media/234524__foolboymedia__notification-up-1.wav");
 ding.load();
 
 // SimpleWebRTC boilerplate
