@@ -3,7 +3,7 @@
 // 
 // Uses the new WebRTC Web API to allow peer-tp-peer two-way video and simple text chat without the use of plugins.
 // Works best with the latest version of Google Chrome.
-// Uses the SimpleWebRTC library (https://github.com/HenrikJoreteg/SimpleWebRTC) as wrapper around the WebRTC framework.
+// Uses the SimpleWebRTC library (https://github.com/andyet/SimpleWebRTC) as wrapper around the WebRTC framework.
 // Supports multiple rooms, uses Peer-to-Peer connections to actually stream video, so very little load is placed on the server itself.
 
 // The room to be joined is prompted at page load.
@@ -21,12 +21,16 @@ var webrtc = new SimpleWebRTC({
     remoteVideosEl: "remoteVideos",
     // immediately ask for camera access
     autoRequestMedia: true,
-    adjustPeerVolume: false
+    adjustPeerVolume: false,
+    debug: false
 });
 // we have to wait until it's ready
-webrtc.on("readyToCall", function () {
-    webrtc.joinRoom(room);
-    $("#info").html("Room name (share with other person to join you): <strong>"+room+"</strong>");
+webrtc.on("connectionReady", function () {
+    webrtc.startLocalVideo();
+    if (room) {
+        webrtc.joinRoom(room);
+        $("#info").html("Room name (share with other person to join you): <strong>"+room+"</strong>");
+    } 
 });
 
 // Handler for recieving chat messages.
